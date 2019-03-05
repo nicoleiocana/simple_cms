@@ -1,4 +1,4 @@
 class SectionEdit < ApplicationRecord
-  belongs_to :admin_user
-  belongs_to :section
+  belongs_to :admin_user, optional: true
+  belongs_to :section, optional: true
 end
