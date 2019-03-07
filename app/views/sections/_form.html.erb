@@ -1,6 +1,6 @@
 <%= error_messages_for(section) %>
 
-<%= form_for(section) do |f| %>
+<%= form_for(section, page_id: @page.id) do |f| %>
 
     <table summary="Section form fields">
       <tr>
@@ -28,7 +28,7 @@
       </tr>
       <tr>
         <td>Page</td>
-        <td><%= f.select(:page_id, @pages.map { |p| [p.name, p.id] }) %></td>
+        <td><%= f.object.page.name %></td>
       </tr>
     </table>
 

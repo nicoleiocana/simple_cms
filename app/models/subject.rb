@@ -1,4 +1,6 @@
 class Subject < ApplicationRecord
+  acts_as_list
+  
   has_many :pages
   belongs_to :section, optional: true
   validates :name, presence: true, length: { maximum: 255 }
