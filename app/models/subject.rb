@@ -1,7 +1,7 @@
 class Subject < ApplicationRecord
   has_many :pages
   belongs_to :section, optional: true
-  validates :name, presence: true
+  validates :name, presence: true, length: { maximum: 255 }
   
   scope :visible, lambda { where(visible: true) }
   scope :invisible, lambda { where(visible: false) }

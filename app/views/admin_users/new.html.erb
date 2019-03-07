@@ -1,0 +1,8 @@
+<%= link_to("<< Back to List", admin_users_path, :class => 'back-link') %>
+
+<div class="admin_users new">
+  <h2>Create Admin User</h2>
+
+  <%= render partial: 'form', locals: { admin_user: @admin_user} %>
+  
+</div>
